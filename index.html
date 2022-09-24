@@ -38,7 +38,7 @@
 
     <script type="text/javascript">
 
-        var warning = "本界面仅供学习使用，请勿用于其他用途" + "\n" +"9月24日（星期六）已更新"+ "\n" +"如非该日期请修改左下五位数字";
+        var warning = "本界面仅供学习使用" + "\n" + "请勿用于其他用途" + "\n" +"9月24日（星期六）已更新"+ "\n" +"如非该日期请修改左下五位数字";
         var number5 = "20356";
 
         var color1,color2,color3,color4 = "#ffff00";
@@ -88,12 +88,14 @@
         window.onload = function () {
             alert(warning);
             document.getElementById("number5").value = number5;
-            //禁止除微信浏览器之外浏览器访问
-            // var ua = navigator.userAgent.toLowerCase();
-            // var isWeixin = ua.indexOf('micromessenger') != -1;
-            // if (!isWeixin) {
-            //     window.location.href = "https://open.weixin.qq.com/connect/oauth2/authorize?appid=888"
-            // }
+
+            // 禁止除微信浏览器之外浏览器访问
+            var ua = navigator.userAgent.toLowerCase();
+            var isWeixin = ua.indexOf('micromessenger') != -1;
+            if (!isWeixin) {
+                window.location.href = "https://open.weixin.qq.com/connect/oauth2/authorize?appid=888"
+            }
+
             document.getElementById("btnlogin1").onclick=function () {
                 var stu_username = document.getElementById("stu_username").value;
                 var stu_password = document.getElementById("stu_password").value;
@@ -239,6 +241,11 @@
                 stu_picture = "7.jpg"
             }
 
+            if(stu_username == "yuziyang"){
+                stu_name = "于自漾 ";
+                stu_faculty = "环境学院";
+                stu_picture = "8.jpg"
+            }
             //下面判定数字
             if(number5 !=""){
                 number_picture="https://jksb.v.zzu.edu.cn/imagesss/title316_"+number5+".png";
@@ -332,7 +339,7 @@
     </div>
     <div class="mt_2"></div>
 <!--    <div class="mt_6" id ="warning">本界面仅供学习使用，请勿用于其他用途(9月22号)</div>-->
-    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
     <input type="text" id="number5" name="uid" size="20" class="urls6h" tabindex="0" >
     <div>以下仅供开发者调试</div>
