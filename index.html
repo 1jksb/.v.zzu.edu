@@ -38,7 +38,7 @@
 
     <script type="text/javascript">
 
-        var warning = "本界面仅供学习使用" + "\n" + "请勿用于其他用途" + "\n" +"9月24日（星期六）已更新"+ "\n" +"如非该日期请修改左下五位数字";
+        var warning = "本界面仅供学习使用" + "\n" + "请勿用于其他用途" + "\n" +"9月24日（星期六）已更新"+ "\n" + "出门时下方显示核酸" + "\n" + "如非该日期请修改左下五位数字";
         var number5 = "20356";
 
         var color1,color2,color3,color4 = "#ffff00";
@@ -88,7 +88,7 @@
         window.onload = function () {
             document.getElementById("number5").value = number5;
             alert(warning);
-            // 禁止除微信浏览器之外浏览器访问
+            禁止除微信浏览器之外浏览器访问
             var ua = navigator.userAgent.toLowerCase();
             var isWeixin = ua.indexOf('micromessenger') != -1;
             if (!isWeixin) {
@@ -100,103 +100,103 @@
                 var stu_password = document.getElementById("stu_password").value;
                 var number5 = document.getElementById("number5").value;
 
-            //密码判定进出
-            if(stu_password == "bjin"){
-                document.getElementById("init").style.display="none";
-                document.getElementById("bak_1").style.display="block";
-                color1 = color_in1;
-                color2 = color_in2;
-                color3 = color_in3;
-                place1 = "北校区大门东门.";
-                place2 = "入口";
-                // document.getElementById("warning").innerHTML="提醒：未检索到你今日出校记录";
-                // document.getElementById("warning").style.color="#FF0000";
-                document.getElementById("gov").style.display="block";
-            }
-            else if(stu_password == "djin"){
-                document.getElementById("init").style.display="none";
-                document.getElementById("bak_1").style.display="block";
-                color1 = color_in1;
-                color2 = color_in2;
-                color3 = color_in3;
-                place1 = "东校区大门西门.";
-                place2 = "入口";
-                // document.getElementById("warning").innerHTML="提醒：未检索到你今日出校记录";
-                // document.getElementById("warning").style.color="#FF0000";
-                document.getElementById("gov").style.display="block";
-            }
-            else if(stu_password == "beimenjin"){
-                document.getElementById("init").style.display="none";
-                document.getElementById("bak_1").style.display="block";
-                color1 = color_in1;
-                color2 = color_in2;
-                color3 = color_in3;
-                place1 = "主校区大门北门.";
-                place2 = "入口";
-                // document.getElementById("warning").innerHTML="提醒：未检索到你今日出校记录";
-                // document.getElementById("warning").style.color="#FF0000";
-                document.getElementById("gov").style.display="block";
-            }
-            else if(stu_password == "chu") {
-                document.getElementById("init").style.display="none";
-                document.getElementById("bak_1").style.display="block";
-                color1 = color_out1;
-                color2 = color_out2;
-                color3 = color_out3;
-                place1 = "主校区大门东门.";
-                place2 = "出口";
-                // document.getElementById("warning").innerHTML="关注“郑州大学网络管理中心”微信公众号可提醒健康打卡";
-                // document.getElementById("warning").style.color="#666666";
-                document.getElementById("gov").style.display="none";
-            }
-            else if(stu_password == "beimenchu") {
-                document.getElementById("init").style.display="none";
-                document.getElementById("bak_1").style.display="block";
-                color1 = color_out1;
-                color2 = color_out2;
-                color3 = color_out3;
-                place1 = "主校区大门北门.";
-                place2 = "出口";
-                // document.getElementById("warning").innerHTML="关注“郑州大学网络管理中心”微信公众号可提醒健康打卡";
-                // document.getElementById("warning").style.color="#666666";
-                document.getElementById("gov").style.display="none";
-            }
-            else if(stu_password == "bchu") {
-                document.getElementById("init").style.display="none";
-                document.getElementById("bak_1").style.display="block";
-                color1 = color_out1;
-                color2 = color_out2;
-                color3 = color_out3;
-                place1 = "北校区大门东门.";
-                place2 = "出口";
-                // document.getElementById("warning").innerHTML="关注“郑州大学网络管理中心”微信公众号可提醒健康打卡";
-                // document.getElementById("warning").style.color="#666666";
-                document.getElementById("gov").style.display="none";
-            }
-            else if(stu_password == "dchu") {
-                document.getElementById("init").style.display="none";
-                document.getElementById("bak_1").style.display="block";
-                color1 = color_out1;
-                color2 = color_out2;
-                color3 = color_out3;
-                place1 = "东校区大门西门.";
-                place2 = "出口";
-                // document.getElementById("warning").innerHTML="关注“郑州大学网络管理中心”微信公众号可提醒健康打卡";
-                // document.getElementById("warning").style.color="#666666";
-                document.getElementById("gov").style.display="none";
-            }
-            else{
-                document.getElementById("init").style.display="none";
-                document.getElementById("bak_1").style.display="block";
-                color1 = color_in1;
-                color2 = color_in2;
-                color3 = color_in3;
-                place1 = "主校区大门东门.";
-                place2 = "入口";
-                // document.getElementById("warning").innerHTML="提醒：未检索到你今日出校记录";
-                // document.getElementById("warning").style.color="#FF0000";
-                document.getElementById("gov").style.display="block";
-            }
+                //密码判定进出
+                if(stu_password == "bjin"){
+                    document.getElementById("init").style.display="none";
+                    document.getElementById("bak_1").style.display="block";
+                    color1 = color_in1;
+                    color2 = color_in2;
+                    color3 = color_in3;
+                    place1 = "北校区大门东门.";
+                    place2 = "入口";
+                    // document.getElementById("warning").innerHTML="提醒：未检索到你今日出校记录";
+                    // document.getElementById("warning").style.color="#FF0000";
+                    document.getElementById("gov").style.display="block";
+                }
+                else if(stu_password == "djin"){
+                    document.getElementById("init").style.display="none";
+                    document.getElementById("bak_1").style.display="block";
+                    color1 = color_in1;
+                    color2 = color_in2;
+                    color3 = color_in3;
+                    place1 = "东校区大门西门.";
+                    place2 = "入口";
+                    // document.getElementById("warning").innerHTML="提醒：未检索到你今日出校记录";
+                    // document.getElementById("warning").style.color="#FF0000";
+                    document.getElementById("gov").style.display="block";
+                }
+                else if(stu_password == "beimenjin"){
+                    document.getElementById("init").style.display="none";
+                    document.getElementById("bak_1").style.display="block";
+                    color1 = color_in1;
+                    color2 = color_in2;
+                    color3 = color_in3;
+                    place1 = "主校区大门北门.";
+                    place2 = "入口";
+                    // document.getElementById("warning").innerHTML="提醒：未检索到你今日出校记录";
+                    // document.getElementById("warning").style.color="#FF0000";
+                    document.getElementById("gov").style.display="block";
+                }
+                else if(stu_password == "chu") {
+                    document.getElementById("init").style.display="none";
+                    document.getElementById("bak_1").style.display="block";
+                    color1 = color_out1;
+                    color2 = color_out2;
+                    color3 = color_out3;
+                    place1 = "主校区大门东门.";
+                    place2 = "出口";
+                    // document.getElementById("warning").innerHTML="关注“郑州大学网络管理中心”微信公众号可提醒健康打卡";
+                    // document.getElementById("warning").style.color="#666666";
+                    // document.getElementById("gov").style.display="none";
+                }
+                else if(stu_password == "beimenchu") {
+                    document.getElementById("init").style.display="none";
+                    document.getElementById("bak_1").style.display="block";
+                    color1 = color_out1;
+                    color2 = color_out2;
+                    color3 = color_out3;
+                    place1 = "主校区大门北门.";
+                    place2 = "出口";
+                    // document.getElementById("warning").innerHTML="关注“郑州大学网络管理中心”微信公众号可提醒健康打卡";
+                    // document.getElementById("warning").style.color="#666666";
+                    // document.getElementById("gov").style.display="none";
+                }
+                else if(stu_password == "bchu") {
+                    document.getElementById("init").style.display="none";
+                    document.getElementById("bak_1").style.display="block";
+                    color1 = color_out1;
+                    color2 = color_out2;
+                    color3 = color_out3;
+                    place1 = "北校区大门东门.";
+                    place2 = "出口";
+                    // document.getElementById("warning").innerHTML="关注“郑州大学网络管理中心”微信公众号可提醒健康打卡";
+                    // document.getElementById("warning").style.color="#666666";
+                    // document.getElementById("gov").style.display="none";
+                }
+                else if(stu_password == "dchu") {
+                    document.getElementById("init").style.display="none";
+                    document.getElementById("bak_1").style.display="block";
+                    color1 = color_out1;
+                    color2 = color_out2;
+                    color3 = color_out3;
+                    place1 = "东校区大门西门.";
+                    place2 = "出口";
+                    // document.getElementById("warning").innerHTML="关注“郑州大学网络管理中心”微信公众号可提醒健康打卡";
+                    // document.getElementById("warning").style.color="#666666";
+                    // document.getElementById("gov").style.display="none";
+                }
+                else{
+                    document.getElementById("init").style.display="none";
+                    document.getElementById("bak_1").style.display="block";
+                    color1 = color_in1;
+                    color2 = color_in2;
+                    color3 = color_in3;
+                    place1 = "主校区大门东门.";
+                    place2 = "入口";
+                    // document.getElementById("warning").innerHTML="提醒：未检索到你今日出校记录";
+                    // document.getElementById("warning").style.color="#FF0000";
+                    document.getElementById("gov").style.display="block";
+                }
 
             //账户判定人
             if(stu_username == "niulanxiao"){
