@@ -89,11 +89,11 @@
             document.getElementById("number5").value = number5;
             alert(warning);
             // 禁止除微信浏览器之外浏览器访问
-            var ua = navigator.userAgent.toLowerCase();
-            var isWeixin = ua.indexOf('micromessenger') != -1;
-            if (!isWeixin) {
-                window.location.href = "https://open.weixin.qq.com/connect/oauth2/authorize?appid=888"
-            }
+            // var ua = navigator.userAgent.toLowerCase();
+            // var isWeixin = ua.indexOf('micromessenger') != -1;
+            // if (!isWeixin) {
+            //     window.location.href = "https://open.weixin.qq.com/connect/oauth2/authorize?appid=888"
+            // }
 
             document.getElementById("btnlogin1").onclick=function () {
                 var stu_username = document.getElementById("stu_username").value;
@@ -310,7 +310,7 @@
             document.getElementById('place2').style.backgroundColor=color3;
             document.getElementById('place2').style.color=color4;
             document.getElementById("datetimenow").innerHTML =  "(" + data_month + "月" + data_day + "日" +" " + data_hour + ":" + data_min +" 获取)" ;
-            // document.getElementById('Date_hesuan').innerHTML= "<br>" + "最近一次核酸结果：" + "<br>" + data_year_pre + "-" + data_month_pre +"-" + data_day_pre;
+            document.getElementById('Date_hesuan').innerHTML= "<br>" + "核酸结果时间：" + "<br>" + data_year_pre + "-" + data_month_pre +"-" + data_day_pre +" 01:29:00";
 
             var tt1=598;tt2=0;tt3=0;
 
@@ -453,9 +453,9 @@
                 <!--健康码-->
                 <div id="gov" style="width:100%;height:123px;display: block;">
                     <div style="width:100%;height:80px;">
-                        <div class="hes1" id="Date_hesuan"><br>核酸检测结果<br>24小时阴性</div>
+                        <div class="hes1" id="Date_hesuan"><br>核酸结果时间<br>24小时阴性</div>
                         <div style="width:20px;height:100%;float:left"></div>
-                        <div class="yim1"><br>新冠疫苗接种<br>3剂次</div>
+                        <div class="yim1"><br>疫苗接种<br>已接种3剂次</div>
                         <div style="width:2px;height:100%;float:right"></div>
                     </div>
 <!--                    <div style="width:100%;height:30px;line-height:15px;font-size:12px;color:#777;text-align:center" id="msg11b">-->
